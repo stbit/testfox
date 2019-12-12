@@ -1,6 +1,4 @@
-ARG NODE_IMAGE=node:12
-
-FROM ${NODE_IMAGE} as build
+FROM node:lts-alpine3.9
 WORKDIR /app
 COPY package.json .
 RUN npm install --loglevel=error
